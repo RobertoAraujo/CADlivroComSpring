@@ -7,7 +7,7 @@ import lombok.Data;
 @Builder
 public class MessageResponseDTO {
 	
-	public MessageResponseDTO messagem;	
-	
+	public MessageResponseDTO messagem;
+
 	
 }
