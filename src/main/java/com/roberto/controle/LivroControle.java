@@ -12,7 +12,7 @@ import com.roberto.dto.MessageResponseDTO;
 
 @SuppressWarnings("unused")
 @RestController
-@RequestMapping ("/api/v1/livros")
+@RequestMapping ("/api/v1/livro")
 public class LivroControle {
 
 	private Livrorepositor livrorepositor;
@@ -23,9 +23,9 @@ public class LivroControle {
 	}
 	
 	@PostMapping
-	public String create(@RequestBody Livro  livro) {
+	public MessageResponseDTO create(@RequestBody Livro  livro) {
 		Livro saveLivro = livrorepositor.save(livro);
-		return MessageResponseDTO.getMessage().toString();
+		return Mess;
 		
 	}
 }
