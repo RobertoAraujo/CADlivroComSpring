@@ -17,7 +17,7 @@ public class Autor {
 	@Column (nullable = false, unique = true)
 	private String nome;
 	
-	@Column
+	@Column (nullable = false)
 	private Integer age;
 
 }
