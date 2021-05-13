@@ -8,6 +8,5 @@ import lombok.Data;
 public class MessageResponseDTO {
 	
 	public MessageResponseDTO messagem;
-
 	
 }

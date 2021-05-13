@@ -14,8 +14,8 @@ import lombok.NoArgsConstructor;
 
 @Data
 @Builder
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 
 @Entity
 @Table( name = "author")
@@ -24,9 +24,10 @@ public class Author {
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
 	private int id;
 	
+	// Não pode ser null e o valor valor dele e unico
 	@Column (nullable = false, unique = true)
 	private String nome;
-	
+	// Não pode ser null e o valor valor dele e unico
 	@Column (nullable = false)
 	private Integer age;
 

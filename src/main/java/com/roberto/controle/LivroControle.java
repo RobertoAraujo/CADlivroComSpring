@@ -7,24 +7,27 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.roberto.classes.Livro;
-import com.roberto.dao.Livrorepositor;
+import com.roberto.dao.LivroRepositor;
 import com.roberto.dto.MessageResponseDTO;
+import com.roberto.service.LivroService;
+
 
 @RestController
 @RequestMapping ("/api/v1/livro")
 public class LivroControle {
 
-	private Livrorepositor livrorepositor;
+	private LivroService livroService;
 	
 	@Autowired
-	public void LivroController(Livrorepositor livrorepositor) {
-		this.livrorepositor = livrorepositor;
+	public LivroControle(LivroService livroService) {
+		this.livroService = livroService;
 	}
 	
 	@PostMapping
-	public MessageResponseDTO create(@RequestBody Livro  livro) {
-		Livro saveLivro = livrorepositor.save(livro);
-		return (MessageResponseDTO) MessageResponseDTO.biulder("Aqui foi Alguma coisa ai !");
+	public MessageResponseDTO create(Livro livro) {
+		Livro saveLivro = livroRepositor.save(livro);
+		return MessageResponseDTO.biulder().message("Recebeu !!"+saveLivro).biulder();
 		
 	}
+
 }

@@ -16,8 +16,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Builder
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 
@@ -47,7 +47,5 @@ public class Livro {
 	@JoinColumn (name="author_id")
 	private Author author;
 
-	
-	
 	
 }
